@@ -1,4 +1,11 @@
+## Overview
+A service Foodery.MobileApi responsible for communicating between mobile application and other services.
+Basicaly the service is [Backend-For-Frontend](https://samnewman.io/patterns/architectural/bff/) for mobile app.
+
 ## Working with solution:
+You have to install python3 >= 3.7.4 and pip >= 20.1
+
+### Run host:
 Run host: python manage.py run
 
 ### Working with migrations:
@@ -11,19 +18,19 @@ python manage.py db migrate --message 'initial database migration'
 Migrate database:
 python manage.py db upgrade
 
-### Testing:
+### Run tests:
 python manage.py test
 
-## Running inside Docker:
+## Working with solutions inside Docker:
 
 ### Build image:
 docker build --tag foodery-mobileapi:latest .
 
-### Host:
+### Run host:
 docker run -p 5000:5000 foodery-mobileapi api
 
 ### Migrate database:
 docker run -p 5000:5000 --network host foodery-mobileapi migrate
 
-### Testing:
+### Run tests:
 docker run -p 5000:5000 --network host foodery-mobileapi test
