@@ -5,7 +5,7 @@ from .main.controller.user_controller import api as user_ns
 from .main.controller.auth_controller import api as auth_ns
 from .main.controller.recipe_controller import api as recipe_ns
 
-blueprint = Blueprint('api', __name__)
+blueprint = Blueprint('api', __name__, url_prefix='/mobile')
 
 authorizations = {
     'apikey': {
