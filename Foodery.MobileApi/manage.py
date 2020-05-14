@@ -10,7 +10,7 @@ from app.main.model import user
 from app.main.model import blacklist
 from app import blueprint
 
-app = create_app(os.getenv('FLASK_ENV') or 'dev')
+app = create_app(os.getenv('FLASK_ENV') or 'local')
 app.register_blueprint(blueprint)
 app.app_context().push()
 
@@ -22,7 +22,7 @@ manager.add_command('db', MigrateCommand)
 
 @manager.command
 def run():
-    app.run(host=os.getenv('FLASK_URL') or "http://localhost", port=os.getenv('FLASK_PORT') or 5000)
+    app.run(host=os.getenv('FLASK_URL') or "localhost", port=os.getenv('FLASK_PORT') or 5000)
 
 @manager.command
 def test():
