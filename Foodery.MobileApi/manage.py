@@ -9,6 +9,7 @@ from app.main import create_app, db
 from app.main.model import user
 from app.main.model import blacklist
 from app import blueprint
+from sqlalchemy_utils import create_database, database_exists
 
 app = create_app(os.getenv('FLASK_ENV') or 'local')
 app.register_blueprint(blueprint)
@@ -22,6 +23,8 @@ manager.add_command('db', MigrateCommand)
 
 @manager.command
 def run():
+    if not database_exists(app.config["SQLALCHEMY_DATABASE_URI"]):
+        create_database(app.config["SQLALCHEMY_DATABASE_URI"])
     app.run(host=os.getenv('FLASK_URL') or "localhost", port=os.getenv('FLASK_PORT') or 5000)
 
 @manager.command

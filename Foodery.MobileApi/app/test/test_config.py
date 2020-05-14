@@ -30,7 +30,7 @@ class TestTestingConfig(TestCase):
         self.assertFalse(app.config['SECRET_KEY'] is 'my_precious')
         self.assertTrue(app.config['DEBUG'])
         self.assertTrue(
-            app.config['SQLALCHEMY_DATABASE_URI'] == 'mysql+pymysql://root:password@localhost:3306/foodery'
+            app.config['SQLALCHEMY_DATABASE_URI'] == 'mysql+pymysql://root:password@localhost:3306/foodery_test'
         )
 
 

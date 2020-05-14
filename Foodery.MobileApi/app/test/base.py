@@ -1,13 +1,15 @@
 from flask_testing import TestCase
 from app.main import db
 from manage import app
-
+from sqlalchemy_utils import create_database, database_exists
 
 class BaseTestCase(TestCase):
     """ Base Tests """
 
     def create_app(self):
         app.config.from_object('app.main.config.TestingConfig')
+        if not database_exists(app.config["SQLALCHEMY_DATABASE_URI"]):
+            create_database(app.config["SQLALCHEMY_DATABASE_URI"])
         return app
 
     def setUp(self):

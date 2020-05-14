@@ -29,7 +29,7 @@ class DevelopmentConfig(Config):
 class TestingConfig(Config):
     DEBUG = True
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = mysql_local_base or 'mysql+pymysql://root:password@localhost:3306/foodery'
+    SQLALCHEMY_DATABASE_URI = mysql_local_base or 'mysql+pymysql://root:password@localhost:3306/foodery_test'
     PRESERVE_CONTEXT_ON_EXCEPTION = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SPOONACULAR_API_KEY = "34a1271dcc3b4ef992eaadbb367a1de4"
