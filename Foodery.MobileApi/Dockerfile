@@ -1,5 +1,5 @@
 FROM python:3.7.4
-COPY . /app
+COPY . /app 
 WORKDIR /app
 
 RUN chmod +x start.sh
