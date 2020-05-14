@@ -23,6 +23,6 @@ api = Api(blueprint,
           security='apikey'
           )
 
-api.add_namespace(user_ns, path='/mobile/user')
-api.add_namespace(auth_ns, path='/mobile/auth')
-api.add_namespace(recipe_ns, path='/mobile/recipe')
+api.add_namespace(user_ns, path='/user')
+api.add_namespace(auth_ns, path='/auth')
+api.add_namespace(recipe_ns, path='/recipe')
