@@ -7,9 +7,9 @@ from flask_testing import TestCase
 from manage import app
 from app.main.config import basedir
 
-class TestDevelopmentConfig(TestCase):
+class TestLocalConfig(TestCase):
     def create_app(self):
-        app.config.from_object('app.main.config.DevelopmentConfig')
+        app.config.from_object('app.main.config.LocalConfig')
         return app
 
     def test_app_is_development(self):

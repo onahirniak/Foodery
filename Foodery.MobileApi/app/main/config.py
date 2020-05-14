@@ -19,7 +19,7 @@ class LocalConfig(Config):
 
 class DevelopmentConfig(Config):
     # uncomment the line below to use postgres
-    SQLALCHEMY_DATABASE_URI = mysql_local_base or 'mysql+pymysql://admin:Longpassword!@dev-foodery.cgwhc8ydmgbf.us-west-2.rds.amazonaws.com/foodery'
+    SQLALCHEMY_DATABASE_URI = mysql_local_base or 'mysql+pymysql://admin:Longpassword!1@dev-foodery.cgwhc8ydmgbf.us-west-2.rds.amazonaws.com/foodery'
     DEBUG = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SPOONACULAR_API_KEY = "34a1271dcc3b4ef992eaadbb367a1de4"
