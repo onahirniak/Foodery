@@ -20,7 +20,8 @@ api = Api(blueprint,
           version='1.0',
           description='Foodery MobileApi documentation',
           authorizations=authorizations,
-          security='apikey'
+          security='apikey',
+          prefix='/mobile'
           )
 
 api.add_namespace(user_ns, path='/user')

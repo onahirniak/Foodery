@@ -14,17 +14,8 @@ class LocalConfig(Config):
     SQLALCHEMY_DATABASE_URI = mysql_local_base or 'mysql+pymysql://root:password@localhost:3306/foodery'
     DEBUG = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SPOONACULAR_API_KEY = "34a1271dcc3b4ef992eaadbb367a1de4"
+    SPOONACULAR_API_KEY = os.getenv('SPOONACULAR_API_KEY') 
     SPOONACULAR_BASE_URL = "https://api.spoonacular.com"
-
-class DevelopmentConfig(Config):
-    # uncomment the line below to use postgres
-    SQLALCHEMY_DATABASE_URI = mysql_local_base or 'mysql+pymysql://admin:Longpassword!1@dev-foodery.cgwhc8ydmgbf.us-west-2.rds.amazonaws.com/foodery'
-    DEBUG = True
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SPOONACULAR_API_KEY = "34a1271dcc3b4ef992eaadbb367a1de4"
-    SPOONACULAR_BASE_URL = "https://api.spoonacular.com"
-
 
 class TestingConfig(Config):
     DEBUG = True
@@ -32,14 +23,21 @@ class TestingConfig(Config):
     SQLALCHEMY_DATABASE_URI = mysql_local_base or 'mysql+pymysql://root:password@localhost:3306/foodery_test'
     PRESERVE_CONTEXT_ON_EXCEPTION = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SPOONACULAR_API_KEY = "34a1271dcc3b4ef992eaadbb367a1de4"
+    SPOONACULAR_API_KEY = os.getenv('SPOONACULAR_API_KEY') 
     SPOONACULAR_BASE_URL = "https://api.spoonacular.com"
 
+class DevelopmentConfig(Config):
+    # uncomment the line below to use postgres
+    SQLALCHEMY_DATABASE_URI = mysql_local_base
+    DEBUG = True
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    SPOONACULAR_API_KEY = os.getenv('SPOONACULAR_API_KEY') 
+    SPOONACULAR_BASE_URL = "https://api.spoonacular.com"
 
 class ProductionConfig(Config):
     DEBUG = False
     # uncomment the line below to use postgres
-    #SQLALCHEMY_DATABASE_URI = mysql_local_base or 'mysql+pymysql://root:password@localhost:3306/foodery'
+    SQLALCHEMY_DATABASE_URI = mysql_local_base
 
 
 config_by_name = dict(

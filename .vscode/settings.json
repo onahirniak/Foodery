@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "/Users/oleksandr_nahirniak/.virtualenvs/foodery/bin/python",
+    "python.linting.pylintArgs": ["--load-plugins", "pylint-flask", "pyling-flask-sqlalchemy"]
+}
