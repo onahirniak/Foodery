@@ -9,8 +9,7 @@ namespace Foodery.Recipes.Tests
 
         public ApiTestsFixture()
         {
-            Server = new TestServer(new WebHostBuilder()
-                .UseStartup<Startup>());
+            Server = new TestServer(new WebHostBuilder().UseStartup<Startup>());
         }
     }
 }

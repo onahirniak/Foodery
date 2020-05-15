@@ -8,10 +8,8 @@ using Foodery.Recipes.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-
 namespace Foodery.Recipes.Controllers
 {
-    
     [ApiController]
     [Route("api/[controller]")]
     public class RecipeController : ControllerBase

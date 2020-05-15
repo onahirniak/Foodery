@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Foodery.Recipes\Foodery.Recipes.csproj" />
+      <ProjectReference Include="..\..\src\Foodery.Recipes\Foodery.Recipes.csproj" />
     </ItemGroup>
 
 </Project>

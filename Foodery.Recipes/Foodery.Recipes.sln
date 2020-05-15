@@ -1,12 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foodery.Recipes", "Foodery.Recipes\Foodery.Recipes.csproj", "{F48DB0FD-6D15-47F1-B73B-9F423E56512F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foodery.Recipes", "src\Foodery.Recipes\Foodery.Recipes.csproj", "{F48DB0FD-6D15-47F1-B73B-9F423E56512F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foodery.Recipes.Application", "Foodery.Recipes.Application\Foodery.Recipes.Application.csproj", "{F4D4357D-B383-45E4-A1CB-DB18F05E7F75}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foodery.Recipes.Application", "src\Foodery.Recipes.Application\Foodery.Recipes.Application.csproj", "{F4D4357D-B383-45E4-A1CB-DB18F05E7F75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foodery.Recipes.Integration", "Foodery.Recipes.Integration\Foodery.Recipes.Integration.csproj", "{CFF9390C-C414-4FC1-8D0E-E9385B4D8CAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foodery.Recipes.Integration", "src\Foodery.Recipes.Integration\Foodery.Recipes.Integration.csproj", "{CFF9390C-C414-4FC1-8D0E-E9385B4D8CAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foodery.Recipes.Tests", "Foodery.Recipes.Tests\Foodery.Recipes.Tests.csproj", "{BE87BF58-4A21-46C7-9950-F1A5D22E2E55}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foodery.Recipes.Tests", "test\Foodery.Recipes.Tests\Foodery.Recipes.Tests.csproj", "{BE87BF58-4A21-46C7-9950-F1A5D22E2E55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
